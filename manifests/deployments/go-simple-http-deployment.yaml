@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-simple-http
+  labels:
+    app: web
+    kind: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+      kind: frontend
+  template:
+    metadata:
+      labels:
+        app: web
+        kind: frontend
+    spec:
+      containers:
+      - name: go-simple-http
+        image: zufardhiyaulhaq/gosimplehttp:v.0.1
+        ports:
+        - containerPort: 8080

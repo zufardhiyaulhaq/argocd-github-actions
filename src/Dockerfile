@@ -3,4 +3,5 @@ run mkdir -p /app
 workdir /app
 add main.go /app
 run go build ./main.go
+expose 8080
 cmd ["./main"]
