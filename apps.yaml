@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/zufardhiyaulhaq/argocd-github-actions.git
     targetRevision: HEAD
-    path: manifests
+    path: manifests/gosimplehttp
   destination:
     server: https://kubernetes.default.svc
     namespace: default
