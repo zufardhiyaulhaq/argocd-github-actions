@@ -4,6 +4,10 @@ metadata:
   name: gosimplehttp
   namespace: argocd
 spec:
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
   project: default
   source:
     repoURL: https://github.com/zufardhiyaulhaq/argocd-github-actions.git
