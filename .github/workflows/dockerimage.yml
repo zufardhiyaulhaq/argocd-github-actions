@@ -16,7 +16,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Build the Docker image
-      run: docker build ./src --file Dockerfile -t zufardhiyaulhaq/gosimplehttp:$RELEASE_VERSION
+      run: docker build ./src --file ./src/Dockerfile -t zufardhiyaulhaq/gosimplehttp:$RELEASE_VERSION
     - name: Publish the Docker image
       run: docker push zufardhiyaulhaq/gosimplehttp:$RELEASE_VERSION
     
